@@ -36,9 +36,9 @@ const multiaddr_to_ws = (addr) => {
 	let url = decodeURIComponent(parsed[5] || parsed[6] || '');
 	if (parsed != null) {
 		if (parsed[1] == 'ip6') {
-			return proto + "://goerli.infura.io/ws/v3/e0e68356f80849068237b511949db1e9"
+			return proto + "://substrate-browser-node-demo.vercel.app"
 		} else {
-			return proto + "://goerli.infura.io/ws/v3/e0e68356f80849068237b511949db1e9"
+			return proto + "://substrate-browser-node-demo.vercel.app"
 		}
 	}
 
