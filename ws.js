@@ -29,16 +29,16 @@ export default () => {
 // TODO: support dns addresses as well
 const multiaddr_to_ws = (addr) => {
 	let parsed = addr.match(/^\/(ip4|ip6|dns4|dns6)\/(.*?)\/tcp\/(.*?)\/(ws|wss|x-parity-ws\/(.*)|x-parity-wss\/(.*))$/);
-	let proto = 'ws';
+	let proto = 'wss';
 	if (parsed[4] == 'ws' || parsed[4] == 'x-parity-ws') {
 		proto = 'ws';
 	}
 	let url = decodeURIComponent(parsed[5] || parsed[6] || '');
 	if (parsed != null) {
 		if (parsed[1] == 'ip6') {
-			return proto + "://localhost:3030"
+			return proto + "://goerli.infura.io/ws/v3/e0e68356f80849068237b511949db1e9"
 		} else {
-			return proto + "://localhost:3030"
+			return proto + "://goerli.infura.io/ws/v3/e0e68356f80849068237b511949db1e9"
 		}
 	}
 
