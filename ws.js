@@ -36,9 +36,9 @@ const multiaddr_to_ws = (addr) => {
 	let url = decodeURIComponent(parsed[5] || parsed[6] || '');
 	if (parsed != null) {
 		if (parsed[1] == 'ip6') {
-			return proto + "://dot.getblock.io/5a1fc3c6-af10-44ec-92f9-f1422705dede/testnet/"
+			return "wss://dot.getblock.io/93e22e79-77f6-427c-b878-100055677eda/mainnet/"
 		} else {
-			return proto + "://dot.getblock.io/5a1fc3c6-af10-44ec-92f9-f1422705dede/testnet/"
+			return "wss://dot.getblock.io/93e22e79-77f6-427c-b878-100055677eda/mainnet/"
 		}
 	}
 
